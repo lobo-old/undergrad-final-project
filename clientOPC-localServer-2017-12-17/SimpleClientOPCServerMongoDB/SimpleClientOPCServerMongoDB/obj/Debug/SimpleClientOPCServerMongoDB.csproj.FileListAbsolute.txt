@@ -1,0 +1,17 @@
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\SimpleClientOPCServerMongoDB.exe.config
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\SimpleClientOPCServerMongoDB.exe
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\SimpleClientOPCServerMongoDB.pdb
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\MongoDB.Bson.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\MongoDB.Driver.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\OpcDaNet.Net4.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.csprojResolveAssemblyReference.cache
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.Properties.Resources.resources
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.exe
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.pdb
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.FormConnection.resources
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\SimpleClientOPCServerMongoDB.exe.manifest
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Debug\SimpleClientOPCServerMongoDB.application
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.exe.manifest
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Debug\SimpleClientOPCServerMongoDB.application

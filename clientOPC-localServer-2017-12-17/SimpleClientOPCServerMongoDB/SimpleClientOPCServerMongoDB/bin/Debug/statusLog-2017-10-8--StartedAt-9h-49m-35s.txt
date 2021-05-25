@@ -1,0 +1,12 @@
+Status Log, Date: 08/10/2017 09:49:35
+
+
+08/10/2017 10:00:11: Browsing servers...
+
+08/10/2017 10:00:13: COMPLETED
+
+08/10/2017 10:00:17: Connecting to Advosol.DA3CBCS.1
+08/10/2017 10:00:51: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode = Primary, TagSets = [] } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/ds121622.mlab.com:21622" }", EndPoint: "Unspecified/ds121622.mlab.com:21622", State: "Disconnected", Type: "Unknown" }] }.
+08/10/2017 10:00:51: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode = Primary, TagSets = [] } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/ds121622.mlab.com:21622" }", EndPoint: "Unspecified/ds121622.mlab.com:21622", State: "Disconnected", Type: "Unknown" }] }.
+Total of Read requests: 0
+Total of Write requests: 0

@@ -1,0 +1,17 @@
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\SimpleClientOPCServerMongoDB.exe.config
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\SimpleClientOPCServerMongoDB.exe.manifest
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\SimpleClientOPCServerMongoDB.application
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\SimpleClientOPCServerMongoDB.exe
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\SimpleClientOPCServerMongoDB.pdb
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\MongoDB.Bson.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\MongoDB.Driver.Core.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\MongoDB.Driver.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\bin\Release\OpcDaNet.Net4.dll
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.FormConnection.resources
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.Properties.Resources.resources
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.csproj.GenerateResource.Cache
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.exe.manifest
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.application
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.exe
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.pdb
+C:\Users\André\Desktop\SimpleClientOPCServerMongoDB\SimpleClientOPCServerMongoDB\obj\Release\SimpleClientOPCServerMongoDB.csprojResolveAssemblyReference.cache
