@@ -1,0 +1,317 @@
+<head>
+  <title>Client</title>
+  <link rel="shortcut icon" href="lobo.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Inserir parte superior: imagem -->      
+  <div class="container-fluid">
+  <!-- Imagem superior -->
+    <div class="row">
+          <div class="col-md-12 ">
+            <img src="top-site.png" width="100%" height="100%" class="img-responsive center-block" alt="top">  
+          </div>
+    </div>
+    <!-- jumbotrom -->
+    <!--
+    <div class="jumbotron text-center">
+      <h1>V Copa Luve de Futsal</h1>
+    </div>
+    -->
+    <!-- TABS links -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+          <ul class="nav nav-pills nav-justified">
+            <!-- Link para o dropdown dos servers -->
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <h1>Servers OPC</h1> 
+              </a>
+              <ul class="dropdown-menu">
+                {{#each serversOPC}}
+                  <li role="presentation" class="text-center">
+                    <a href="#tab-{{idParserTabControl _id}}" aria-controls="tab-{{idParserTabControl _id}}" role="tab" data-toggle="tab">
+                            <h1><span class="label label-{{#if connected}}success{{else}}default{{/if}}"> {{serverName}}</span></h1> 
+                    </a>
+                  </li>
+                {{/each}}
+
+              </ul>
+            </li>
+            <!-- Link para a lista das readRequests -->
+            <li role="presentation" class><a href="#tab-ReadRequests" aria-controls="tab-ReadRequests" role="tab" data-toggle="tab"><h1>Read Requests</h1> </a></li>
+            <!-- Link para a lista das writeRequests -->
+            <li role="presentation" class><a href="#tab-WriteRequests" aria-controls="tab-WriteRequests" role="tab" data-toggle="tab"><h1>Write Requests</h1></a></li>
+
+          
+          </ul>
+      </div>
+    </div>
+    <!-- TABS conteudos -->
+    <div class="tab-content" id="tabsOptionsServers">
+       <!-- conteudo do dropdown dos servers -->
+        {{#each serversOPC}}
+          
+        <div class="tab-pane fade" role="tabpanel" id="tab-{{idParserTabControl _id}}" aria-labelledby="tab-{{idParserTabControl _id}}">
+              <div class="row">
+                <div class="panel panel-default">
+                  <div class="panel-heading text-center">
+                    <div class="row text-center">
+                      <h3>Server device manager</h3>
+                    </div>
+                    <div class="row text-center">
+                      <span class="label label-{{#if connected}}success{{else}}default{{/if}}">Last time on: {{lastTimeOn}}</span>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    
+                      <div class="table-responsive">
+                                   <table name="tabelaServersOPC" class="table table-striped table-bordered">
+                                      <thead>
+                                        <tr>
+                                          <th><div class="text-center">Server Info</div></th>
+                                          <th><div class="text-center">Status</div></th>
+                                          <th><div class="text-center">Periodic Read</div></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                            <td>
+                                              
+                                                  
+                                                  <div class="text-center"> Name: 
+                                                    <span class="label label-{{#if connected}}success{{else}}default{{/if}}"> {{serverName}}</span>
+                                                </div>
+                                                
+                                                
+                                            </td>
+                                            <td>
+                                              
+                                                  
+                                                  <div class="text-center"> 
+                                                    <span class="label label-{{#if connected}}success{{else}}default{{/if}}">{{#if connected}}<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Server Online{{else}}Server Offline{{/if}}</span>
+                                                </div>
+                                               
+                                                 
+                                            </td>
+                                            <td>
+                                              
+                                                  <div class="text-center"> 
+                                                    <button class="btn btn-default btn-sm start-periodic-inServer" name="labServer">
+                                                      <span class="glyphicon glyphicon-play" aria-hidden="true"> Start </span> 
+                                                    </button>
+                                                  </div>
+                                               
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              
+                                                  <div class="text-center"> In Machine: 
+                                                    <span class="label label-{{#if connected}}success{{else}}default{{/if}}"> {{inMachineNamed}}</span>
+                                                </div>
+                                                
+                                            </td>
+                                            <td>
+                                              
+                                                  <div class="text-center">
+                                                    <span class="label label-default">  
+                                                  {{#if checked}}Periodic read: <span class="label label-{{#if periodicStatus command}}success{{else}}danger{{/if}}">{{command}}
+                                              </span>{{else}}Waiting server...{{/if}}
+                                                </span>
+                                                </div>
+                                                 
+                                            </td>
+                                            <td>
+                                              
+                                                  <div class="text-center">
+                                                    <button class="btn btn-default btn-sm stop-periodic-inServer" name="labServer">
+                                                      <span class="glyphicon glyphicon-stop" aria-hidden="true"> Stop </span> 
+                                                    </button>
+                                                  </div>
+                                               
+                                            </td>
+                                          </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+
+                                  <!-- Parte dos dispositivos -->
+                                  {{#each devicesAvailableInServer serverName}}
+                                    <div class="row">
+                                      <div class="panel panel-info">
+                                        <div class="panel-heading text-center">{{deviceID}}</div>
+                                        <div class="panel-body">
+                                          <table name="tabelaDevicesAvailable" class="table table-striped table-bordered">
+                                            <thead>
+                                              <tr>
+                                                <th><div class="text-center">Read</div></th>
+                                                <th><div class="text-center">Write</div></th>
+                                                <th><div class="text-center">Last Value</div></th>
+                                                <th><div class="text-center">Time Stamp</div></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                  <td> 
+                                                    <button class="btn btn-default device-ReadRequest" name="lab">
+                                                      <span class="glyphicon glyphicon-refresh" aria-hidden="true"> </span> 
+                                                    </button>
+                                                  </td>
+                                                  <td>
+                                                    <form class="deviceNew-writeRequest form-inline">
+                                                      <div class="form-group">
+                                                        <input type="text" name="devWriteRequestServer" class="form-control" id="devWriteRequestServerTextID" placeholder="Value, ex: 1,5" required="" pattern="-?[0-9]*,?[0-9]+" title="Use only numbers, comma for floating point values and 0 or 1 for true and false">
+                                                      </div>
+                                                    </form>
+                                                  </td>
+                                                  <td>
+                                                    <div class="text-center">{{displayValue serverName deviceID}}</div>
+                                                  </td>
+                                                  <td>
+                                                    <div class="text-center">{{displayTStamp serverName deviceID}}</div>
+                                                  </td>
+                                            </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        </div>
+                                      </div>
+                                  {{/each}}
+                    
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        {{/each}}
+
+      <!-- conteudo das readRequests -->
+      <div class="tab-pane fade" role="tabpanel" id="tab-ReadRequests" aria-labelledby="tab-ReadRequests">
+          
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">Send read requests manually</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                    <form class="new-readRequest form-inline">
+                      <div class="form-group">
+                        <label for="readRequestServerID">Server name</label>
+                        <input type="text" name="readRequestServer" class="form-control" id="readRequestServerTextID" placeholder="Type the server Name" required pattern="[A-z]+.*" title="A server name doesn't start with a number">
+                      </div>
+                      <div class="form-group">
+                        <label for="readRequestServerID">Device ID</label>
+                        <input type="text" name="readRequestText" class="form-control" id="readRequestTextID" placeholder="Type the device ID" required pattern="[A-z]+.*" title="A deviceId doesn't start with a number">
+                      </div>
+                      <button type="submit" class="btn btn-default">Send</button>
+                    </form>
+                  </div>
+                </div>
+                
+                <div class="panel panel-primary">
+                  <div class="panel-heading">All read requests</div>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                     <table name="tabelaReadRequest" class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Date</th> 
+                            <th>Response Date</th>
+                            <th>Response time(s)</th>
+                            <th>Response Value</th>
+                            <th>Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{#each readRequestsSubmited}}
+                            {{> TempReadRequest}}
+                          {{/each}}
+                           
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            
+          </div>
+      </div>
+      
+      <!-- conteudo das writeRequests -->
+      <div class="tab-pane fade" role="tabpanel" id="tab-WriteRequests" aria-labelledby="tab-WriteRequests">
+        
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">Send write requests manually</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                    <form class="new-writeRequest form-inline">
+                      <div class="form-group">
+                        <label for="writeRequestServerID">Server name</label>
+                        <input type="text" name="writeRequestServer" class="form-control" id="writeRequestServerTextID" placeholder="Type the server Name" required pattern="[A-z]+.*" title="A server name doesn't start with a number">
+                      </div>
+                      <div class="form-group">
+                        <label for="writeRequestTextID">Request name</label>
+                        <input type="text" name="writeRequestText" class="form-control" id="writeRequestTextID" placeholder="Type the text of the request" required pattern="[A-z]+.*" title="A deviceId doesn't start with a number">
+                      </div>
+                      <div class="form-group">
+                        <label for="writeRequestValueID">Value</label>
+                        <input type="text" name="writeRequestValue" class="form-control" id="writeRequestValueID" placeholder="Value, ex: 1,5" required pattern="-?[0-9]*,?[0-9]+" title="Use only numbers, comma for floating point values and 0 or 1 for true and false">
+                      </div>
+                      <button type="submit" class="btn btn-default">Send</button>
+                    </form>
+                  </div>
+                </div>
+                
+                <div class="panel panel-primary">
+                  <div class="panel-heading">All write requests</div>
+                  <div class="panel-body">
+                    <div class="table-responsive">
+                     <table name="tabelaWriteRequest" class="table table-bordered table-hover">
+                        <thead>
+                          <tr>
+                            <th>Status</th>
+                            <th>Name</th>
+                            <th>Date</th> 
+                            <th>Response Date</th>
+                            <th>Response time(s)</th>
+                            <th>Value Sent</th>
+                            <th>Response</th>
+                            <th>Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{#each writeRequestsSubmited}}
+                            {{> TempWriteRequest}}
+                          {{/each}}
+                           
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                  </div>
+                </div>
+                
+              </div>
+            
+          </div>
+            
+      </div>
+    </div>
+  
+    <!--<div class="row">
+          <div class="col-md-12 ">
+            <img src="top.png" width="100%" height="100%" class="img-responsive center-block" alt="top">  
+          </div>
+    </div>-->
+
+  </div><!-- container END -->      
+
+  <!-- Inserir footer -->      
+</body>

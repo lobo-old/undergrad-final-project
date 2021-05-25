@@ -1,0 +1,11 @@
+<template name="TempReadRequest">
+  <tr>
+    <td><span class="label label-{{#if checked}}success{{else}}default{{/if}}">{{#if checked}}<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Checked{{else}}Waiting Server...{{/if}}</span></td>
+    <td> {{requestT}}</td> 
+    <td> {{createdAt}}</td> 
+    <td> {{checkedAt}} </td>
+    <td> {{responseTime}}</td>
+    <td> {{responseValue}}</td>
+    <td><button class="btn btn-default delete-ReadRequest"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </button></td>
+  </tr>
+</template>
